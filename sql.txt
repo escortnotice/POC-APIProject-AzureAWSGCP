@@ -1,0 +1,11 @@
+//1. User
+CREATE TABLE useraccount(
+   id SERIAL PRIMARY KEY,  -- SERIAL will create a sequence and assign to this field which will auto-increment, add NotNull constraint
+   username VARCHAR (50) UNIQUE NOT NULL,
+   password VARCHAR (50) NOT NULL,
+   email VARCHAR (355) UNIQUE NOT NULL,
+   created_on TIMESTAMP NOT NULL,
+   last_login TIMESTAMP
+);
+insert into useraccount (username,password,email,created_on,last_login) 
+values('roy','cactus123','roy.c@gmail.com',now(),now());
